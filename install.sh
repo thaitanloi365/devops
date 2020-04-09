@@ -1,14 +1,13 @@
 #!/bin/sh
 set -e
 
+
 install_docker() {
     echo -e "------> Install Docker \n"
     sudo apt-get update
 
     sudo apt-get remove docker docker-engine docker.io
-    
-    sudo apt install docker.io
-    
+
     sudo usermod -aG docker $(whoami)
 
     sudo systemctl start docker
