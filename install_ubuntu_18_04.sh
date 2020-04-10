@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+REDIS=${1:-n}
+
 install_docker() {
     echo -e "------> Install Docker \n"
     sudo apt-get update
@@ -35,12 +37,25 @@ install_docker_compose() {
     docker-compose --version
 }
 
+install_redis() {
+    echo -e "------> Installing Redis\n"
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install redis-server
+    sudo systemctl enable redis-server.service
+}
 
 main() {
     install_docker
     install_git
     install_make
     install_docker_compose
+    if [ $REDIS != "${REDIS#[Yy]}" ] ;then
+        install_redis
+    else
+    if
 }
+
+
 
 main
