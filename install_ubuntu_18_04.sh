@@ -52,8 +52,7 @@ main() {
     install_docker_compose
     if [ $REDIS != "${REDIS#[Yy]}" ] ;then
         install_redis
-    else
-    if
+    fi
 }
 
 
