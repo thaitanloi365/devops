@@ -11,7 +11,7 @@ install_docker() {
 
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" -y
 
     sudo apt update -y
 
@@ -38,7 +38,7 @@ install_aws() {
 
 install_make() {
     echo -e "------> Install Make \n"
-    sudo apt-get install build-essential -y
+    sudo apt install make
 }
 
 install_docker_compose() {
