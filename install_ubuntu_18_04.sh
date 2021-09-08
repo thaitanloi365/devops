@@ -5,11 +5,11 @@ REDIS=${1:-n}
 
 install_docker() {
     echo -e "------> Install Docker \n"
-    sudo apt-get update
+    sudo apt-get update -y
 
-    sudo apt-get remove docker docker-engine docker.io
+    sudo apt-get remove docker docker-engine docker.io -y
     
-    sudo apt install docker.io
+    sudo apt install docker.io -y
     
     sudo usermod -aG docker $(whoami)
 
@@ -18,12 +18,12 @@ install_docker() {
 
 install_git() {
     echo -e "------> Install Git \n"
-    sudo apt install git
+    sudo apt install git -y
 }
 
 install_make() {
     echo -e "------> Install Make \n"
-    sudo apt-get install build-essential
+    sudo apt-get install build-essential -y
 }
 
 install_docker_compose() {
@@ -43,9 +43,9 @@ install_docker_compose() {
 
 install_redis() {
     echo -e "------> Installing Redis\n"
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install redis-server
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install redis-server -y
     sudo systemctl enable redis-server.service
 }
 
