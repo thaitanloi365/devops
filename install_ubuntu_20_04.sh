@@ -29,6 +29,13 @@ install_git() {
     sudo apt install git -y
 }
 
+install_aws() {
+    echo -e "------> Install AWS CLI 2 \n"
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+}
+
 install_make() {
     echo -e "------> Install Make \n"
     sudo apt-get install build-essential -y
@@ -62,6 +69,7 @@ main() {
     install_git
     install_make
     install_docker_compose
+    install_aws
     if [ $REDIS != "${REDIS#[Yy]}" ] ;then
         install_redis
     fi
