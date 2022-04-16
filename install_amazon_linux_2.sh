@@ -1,6 +1,6 @@
 install_docker() {
     echo -e "------> Install Docker \n"
-    sudo amazon-linux-extras install docker
+    sudo amazon-linux-extras install docker -y
     sudo service docker start
     sudo usermod -a -G docker ec2-user
 
