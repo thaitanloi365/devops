@@ -5,5 +5,8 @@ curl -fsSL https://raw.githubusercontent.com/thaitanloi365/devops/master/install
 
 curl -fsSL https://raw.githubusercontent.com/thaitanloi365/devops/master/install_ubuntu_20_04.sh -o install.sh && chmod +x install.sh
 
+curl -fsSL https://raw.githubusercontent.com/thaitanloi365/devops/master/install_ubuntu_24_04.sh -o install.sh && chmod +x install.sh
 
 curl -fsSL https://raw.githubusercontent.com/thaitanloi365/devops/master/install_amazon_linux_2.sh -o install.sh && chmod +x install.sh
+
+curl -fsSL https://raw.githubusercontent.com/thaitanloi365/devops/master/install_amazon_linux_2023.sh -o install.sh && chmod +x install.sh
